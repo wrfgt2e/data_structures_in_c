@@ -6,7 +6,7 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/08 23:43:41 by gipark            #+#    #+#             */
-/*   Updated: 2020/03/08 23:51:25 by gipark           ###   ########.fr       */
+/*   Updated: 2020/03/09 00:14:48 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void    hanoi_tower(int num, char from, char by, char to)
 
 int main(void)
 {
-    hanoi_tower(3, 'A', 'B', 'C');
+    hanoi_tower(4, 'A', 'B', 'C');
     return (0);
 }
