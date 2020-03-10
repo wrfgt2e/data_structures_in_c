@@ -6,7 +6,7 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 21:08:04 by gipark            #+#    #+#             */
-/*   Updated: 2020/03/09 21:08:35 by gipark           ###   ########.fr       */
+/*   Updated: 2020/03/11 02:57:28 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void ListInit(List * plist)
 
 void LInsert(List * plist, LData data)
 {
-	if(plist->numOfData > LIST_LEN) 
+	if(plist->numOfData >= LIST_LEN) 
 	{
 		puts("저장이 불가능합니다.");
 		return;
