@@ -6,12 +6,12 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 21:37:45 by gipark            #+#    #+#             */
-/*   Updated: 2020/03/11 04:19:56 by gipark           ###   ########.fr       */
+/*   Updated: 2020/03/11 04:31:11 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "../ArrayList.h"
+#include "ArrayList.h"
 
 int main(void)
 {
