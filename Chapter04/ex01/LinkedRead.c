@@ -6,7 +6,7 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 09:37:17 by gipark            #+#    #+#             */
-/*   Updated: 2020/03/15 12:55:32 by gipark           ###   ########.fr       */
+/*   Updated: 2020/05/31 01:53:23 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main(void)
     // 데이터를 입력받는 과정(바뀐 부분) ///////
     while (1)
     {
-        printf("자연수 입력: ");
+        printf("Enter a natural number: ");
         scanf("%d", &readData);
         if (readData < 1)
             break ;
@@ -54,9 +54,9 @@ int main(void)
     printf("\n");
 
     // 입력 받은 데이터의 출력과정 ///////
-    printf("입력 받은 데이터의 전체출력! \n");
+    printf("Full output of data entered. \n");
     if (head == NULL)
-        printf("저장된 자연수가 존재하지 않습니다. \n");
+        printf("The stored natural number doesn't exist. \n");
     else
     {
         cur = head;
@@ -78,15 +78,15 @@ int main(void)
         Node *delNode = head;
         Node *delNextNode = head->next;
 
-        printf("%d을(를) 삭제합니다. \n", head->data);
+        printf("Delete %d. \n", head->data);
         free(delNode);      // 첫 번째 노드 삭제
 
         while (delNextNode != NULL)
         {
             delNode = delNextNode;
             delNextNode = delNextNode->next;
-            
-            printf("%d을(를) 삭제합니다. \n", delNode->data);
+
+            printf("Delete %d. \n", delNode->data);
             free(delNode);
         }
     }

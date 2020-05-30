@@ -6,7 +6,7 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 06:37:10 by gipark            #+#    #+#             */
-/*   Updated: 2020/03/12 23:41:17 by gipark           ###   ########.fr       */
+/*   Updated: 2020/05/31 01:49:35 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
 
     while (1)
     {
-        printf("자연수 입력: ");
+        printf("Enter a natural number: ");
         scanf("%d", &readData);
         if (readData < 1)
             break ;
