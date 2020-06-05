@@ -6,7 +6,7 @@
 /*   By: gipark <gipark@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/15 09:37:17 by gipark            #+#    #+#             */
-/*   Updated: 2020/05/31 01:53:23 by gipark           ###   ########.fr       */
+/*   Updated: 2020/06/06 06:59:17 by gipark           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,12 @@ typedef struct _node {
 int main(void)
 {
     Node * head = NULL;
-    Node * tail = NULL;
     Node * cur = NULL;
 
     Node * newNode = NULL;
     int readData;
 
-    // 데이터를 입력받는 과정(바뀐 부분) ///////
+    // Input Data
     while (1)
     {
         printf("Enter a natural number: ");
@@ -35,16 +34,13 @@ int main(void)
         if (readData < 1)
             break ;
 
-        // 노드의 추가과정
+        // Additional process of Nodes
         newNode = (Node *)malloc(sizeof(Node));
         newNode->data = readData;
         newNode->next = NULL;
 
         if (head == NULL)
-        {
             head = newNode;
-            tail = newNode;
-        }
         else
         {
             newNode->next = head;
@@ -53,10 +49,10 @@ int main(void)
     }
     printf("\n");
 
-    // 입력 받은 데이터의 출력과정 ///////
-    printf("Full output of data entered. \n");
+    // Output Data
+    printf("Full output of data entered.\n");
     if (head == NULL)
-        printf("The stored natural number doesn't exist. \n");
+        printf("The stored natural number doesn't exist.\n");
     else
     {
         cur = head;
@@ -70,23 +66,23 @@ int main(void)
     }
     printf("\n\n");
 
-    // 메모리의 해제과정 ///////
+    // Free Memory
     if (head == NULL)
         return (0);
     else
     {
-        Node *delNode = head;
-        Node *delNextNode = head->next;
+        Node * delNode = head;
+        Node * delNextNode = head->next;
 
-        printf("Delete %d. \n", head->data);
-        free(delNode);      // 첫 번째 노드 삭제
+        printf("Delete %d.\n", delNode->data);
+        free(delNode);      // Delete First Node
 
         while (delNextNode != NULL)
         {
             delNode = delNextNode;
-            delNextNode = delNextNode->next;
+            delNextNode = delNode->next;
 
-            printf("Delete %d. \n", delNode->data);
+            printf("Delete %d.\n", delNode->data);
             free(delNode);
         }
     }
